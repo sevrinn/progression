@@ -1,7 +1,7 @@
 # Progression Music App
 
 ## Essential Features
-- **Registration and authorization.** You can view artists pages and listen to music but you cant interact in any other way. Registered users can like & favorite tracks and artists, upload tracks of their own as private while they're in progress and public when they are finished. Registration form is standard (we'll start with email and add Facebook, Google, and Apple auth later)
+- **Registration and authorization.** You can view artist/track pages and listen to music but you cant interact in any other way. Registered users can like & favorite tracks and artists, upload tracks of their own as private while they're in progress and public when they are finished. Registration form is standard (we'll start with email and add Facebook, Google, and Apple auth later)
 
 - **Simple search and navigation.** User can easily a quickly search for tracks, artists, albums, and genres by keywords. 
 
@@ -23,3 +23,5 @@
 - general overview based on this article [SoundCloud Clone App - How to Create A Music App Like SoundCloud?](https://www.merehead.com/blog/soundcloud-clone-app-create-music-app-like-soundcloud/)
 
 - HLS decoded using JavaScript with [hls.js](https://www.github.com/dailymotion/hls.js)
+
+- mp3 to ogg converter [Convertio](https://www.convertio.co/mp3-ogg)
