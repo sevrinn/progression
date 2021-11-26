@@ -5,10 +5,11 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+// sets up proper way of sending and recieving data as JSON
+app.use(express.json(), express.urlencoded({extended: true}));
 
-// configure mongoose to connect
+
+// runs config to connect to mongodb server
 require ('./config/mongoose.config');
 
 // add routes to listen for 
@@ -18,7 +19,7 @@ require ('./config/mongoose.config');
 
 // star the app server listening
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+  console.log(`Express server is listening on port ${port}`);
 });
 
 
