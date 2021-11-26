@@ -11,9 +11,10 @@ app.use(express.urlencoded({extended: true}));
 // configure mongoose to connect
 require ('./config/mongoose.config');
 
-// add routes to listen for
-const userRoutes = require('./routes/user.routes');
-userRoutes(app);
+// add routes to listen for 
+// UNCOMMENT WHEN CREATED, BIIIIIIISH!!!!!!!!
+// const userRoutes = require('./routes/user.routes');
+// userRoutes(app);
 
 // star the app server listening
 app.listen(port, () => {
