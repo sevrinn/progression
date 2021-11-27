@@ -13,11 +13,10 @@ app.use(express.json(), express.urlencoded({extended: true}));
 require ('./config/mongoose.config');
 
 // add routes to listen for 
-// UNCOMMENT WHEN CREATED, BIIIIIIISH!!!!!!!!
-// const userRoutes = require('./routes/user.routes');
-// userRoutes(app);
+const UserRoutes = require('./routes/users.routes');
+UserRoutes(app);
 
-// star the app server listening
+// start the express server listening
 app.listen(port, () => {
   console.log(`Express server is listening on port ${port}`);
 });
