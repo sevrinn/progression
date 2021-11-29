@@ -6,6 +6,7 @@ const app = express();
 const port = 8000;
 
 // sets up proper way of sending and recieving data as JSON
+// this line defines the type of request coming through the form. makes sure its above the require mongoose
 app.use(express.json(), express.urlencoded({extended: true}));
 
 
