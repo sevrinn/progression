@@ -28,8 +28,15 @@ const getUserById = (req, res) => {
   .catch((err) => res.send(err))
 }
 
+const updateUser = (req, res) => {
+  User.findOneAndUpdate({_id: req.params.userId}, req.body, {new: true, runValidators: true})
+  .then((updatedUser) => res.json(updatedUser))
+  .catch((err) => res.send(err))
+}
+
 module.exports = {
   getAllUsers,
   addNewUser,
-  getUserById
+  getUserById,
+  updateUser
 };
