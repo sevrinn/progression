@@ -21,7 +21,15 @@ const addNewUser = (req, res) => {
   .catch((err) => res.json({errorMessage: err}));
 }
 
+const getUserById = (req, res) => {
+  console.log(req.params.userId)
+  User.findOne({ _id: req.params.userId })
+  .then((user) => res.json({user: user}))
+  .catch((err) => res.send(err))
+}
+
 module.exports = {
   getAllUsers,
-  addNewUser
+  addNewUser,
+  getUserById
 };
