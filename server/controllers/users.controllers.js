@@ -34,9 +34,16 @@ const updateUser = (req, res) => {
   .catch((err) => res.send(err))
 }
 
+const deleteUser = (req, res) => {
+  User.findOneAndDelete({_id: req.params.userId})
+  .then((deleteUser) => res.json(deleteUser))
+  .catch((err) => res.json(err))
+}
+
 module.exports = {
   getAllUsers,
   addNewUser,
   getUserById,
-  updateUser
+  updateUser,
+  deleteUser
 };
