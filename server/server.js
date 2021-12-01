@@ -1,6 +1,6 @@
 // import express and other libraries
 const express = require('express');
-
+const cors = require('cors');
 // configure express server
 const app = express();
 const port = 8000;
@@ -12,6 +12,8 @@ app.use(express.json(), express.urlencoded({extended: true}));
 
 // runs config to connect to mongodb server
 require ('./config/mongoose.config');
+
+app.use(cors());
 
 // add routes to listen for 
 const UserRoutes = require('./routes/users.routes');
