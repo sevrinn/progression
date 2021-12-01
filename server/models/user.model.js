@@ -1,7 +1,7 @@
 // require mongoose
 const mongoose = require('mongoose');
 
-// define new mo schema. don't forget the timestamps!
+// define new mongoose schema. don't forget the timestamps!
 const UserSchema = new mongoose.Schema({
   firstName: {
     type: String,
@@ -13,7 +13,8 @@ const UserSchema = new mongoose.Schema({
   },
   username: {
     type: String,
-    required: [true, 'Username is required'], 
+    required: [true, 'Username is required'],
+    minLength: [3, 'Username must be 3 or more characters'], 
   },
   email: {
     type: String,
